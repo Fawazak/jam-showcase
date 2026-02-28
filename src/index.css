@@ -9,33 +9,33 @@
     --font-display: 'Playfair Display', serif;
     --font-body: 'DM Sans', sans-serif;
 
-    --background: 30 33% 96%;
-    --foreground: 20 25% 15%;
+    --background: 40 60% 96%;
+    --foreground: 30 30% 20%;
 
-    --card: 30 30% 93%;
-    --card-foreground: 20 25% 15%;
+    --card: 40 50% 92%;
+    --card-foreground: 30 30% 20%;
 
-    --popover: 30 33% 96%;
-    --popover-foreground: 20 25% 15%;
+    --popover: 40 60% 96%;
+    --popover-foreground: 30 30% 20%;
 
-    --primary: 350 45% 35%;
-    --primary-foreground: 30 33% 96%;
+    --primary: 36 70% 62%;
+    --primary-foreground: 30 30% 18%;
 
-    --secondary: 145 25% 32%;
-    --secondary-foreground: 30 33% 96%;
+    --secondary: 30 40% 45%;
+    --secondary-foreground: 40 60% 96%;
 
-    --muted: 30 20% 90%;
-    --muted-foreground: 20 10% 45%;
+    --muted: 38 40% 90%;
+    --muted-foreground: 30 20% 45%;
 
-    --accent: 16 55% 50%;
-    --accent-foreground: 30 33% 96%;
+    --accent: 18 60% 52%;
+    --accent-foreground: 40 60% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
-    --ring: 350 45% 35%;
+    --border: 36 35% 82%;
+    --input: 36 35% 82%;
+    --ring: 36 70% 62%;
 
     --radius: 0.5rem;
 
