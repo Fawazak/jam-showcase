@@ -12,7 +12,7 @@ const AboutSection = () => {
         </h2>
         <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
           <p>
-            Meadow & Berry began in a small farmhouse kitchen, where generations of family 
+            Martabanii began in a small kitchen, where generations of family 
             recipes met fresh, locally-sourced fruits. Every jar is made by hand in small 
             batches, ensuring the quality and flavor that only patience and love can bring.
           </p>
