@@ -1,12 +1,25 @@
+import { useState } from "react";
+
+interface Size {
+  label: string;
+  volume: string;
+  price: string;
+}
+
 interface ProductCardProps {
   name: string;
   description: string;
-  price: string;
-  image: string;
+  image?: string;
+  category: string;
+  sizes: Size[];
   delay?: number;
 }
 
-const ProductCard = ({ name, description, price, image, delay = 0 }: ProductCardProps) => {
+const ProductCard = ({ name, description, image, sizes, delay = 0 }: ProductCardProps) => {
+  const [selected, setSelected] = useState(0);
+  const currentImage = sizes[selected].image || image;
+
+
   return (
     <div
       className="group opacity-0 animate-fade-up"
@@ -14,8 +27,8 @@ const ProductCard = ({ name, description, price, image, delay = 0 }: ProductCard
     >
       <div className="overflow-hidden rounded-sm mb-4 bg-card">
         <img
-          src={image}
-          alt={`${name} jar`}
+          src={currentImage}
+          alt={name}
           className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
@@ -24,11 +37,34 @@ const ProductCard = ({ name, description, price, image, delay = 0 }: ProductCard
         <h3 className="font-display text-xl font-semibold text-foreground mb-1">
           {name}
         </h3>
-        <p className="font-body text-sm text-muted-foreground mb-2">
+        <p className="font-body text-sm text-muted-foreground mb-3">
           {description}
         </p>
+
+        {/* Size selector — only shows if more than 1 size */}
+        {sizes.length > 1 && (
+          <div className="flex justify-center gap-2 mb-3">
+            {sizes.map((size, i) => (
+              <button
+                key={size.label}
+                onClick={() => setSelected(i)}
+                className={`px-3 py-1 rounded-full text-xs font-body border transition-colors ${
+                  selected === i
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "border-muted-foreground/30 text-muted-foreground hover:border-primary"
+                }`}
+              >
+                {size.label}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <p className="font-body text-xs text-muted-foreground mb-1">
+          {sizes[selected].volume}
+        </p>
         <p className="font-display text-lg text-primary font-semibold">
-          {price}
+          {sizes[selected].price}
         </p>
       </div>
     </div>

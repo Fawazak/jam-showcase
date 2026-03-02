@@ -21,14 +21,14 @@ const HeroSection = () => {
           <span className="italic font-normal text-4xl md:text-5xl">مرطباني</span>
         </h1>
         <p className="font-body text-lg text-primary-foreground/90 mb-8 max-w-xl mx-auto">
-          Small-batch, seasonal jams made from hand-picked fruits and simple, 
+          Small-batch, seasonal jams and juices made from hand-picked fruits and simple, 
           natural ingredients. Every jar tells a story.
         </p>
         <a
           href="#products"
           className="inline-block bg-primary text-primary-foreground font-body font-medium px-8 py-3 rounded-sm hover:bg-primary/90 transition-colors tracking-wide text-sm uppercase"
         >
-          Explore Our Jams
+          Explore Our Collection
         </a>
       </div>
     </section>

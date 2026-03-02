@@ -10,7 +10,7 @@ const Header = () => {
         </a>
         <nav className="hidden md:flex items-center gap-8">
           <a href="#products" className="font-body text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Our Jams
+            Our Collection
           </a>
           <a href="#about" className="font-body text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             Our Story
