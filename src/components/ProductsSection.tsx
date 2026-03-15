@@ -24,10 +24,11 @@ const products = [
     image: jamStrawberry,
     category: "jam",
     sizes: [
-      { label: "S", volume: "120g", price: "5 JOD" },
-      { label: "M", volume: "250g", price: "7 JOD" },
+      { label: "S", volume: "~250g", price: "5 JOD" },
+      { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Apricot Jam",
@@ -35,10 +36,11 @@ const products = [
     image: jamApricot,
     category: "jam",
     sizes: [
-      { label: "S", volume: "120g", price: "5 JOD" },
-      { label: "M", volume: "250g", price: "7 JOD" },
+      { label: "S", volume: "~250g", price: "5 JOD" },
+      { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Khushkhash Jam",
@@ -46,10 +48,11 @@ const products = [
     image: jamKhush,
     category: "jam",
     sizes: [
-      { label: "S", volume: "120g", price: "5 JOD" },
-      { label: "M", volume: "250g", price: "7 JOD" },
+      { label: "S", volume: "~250g", price: "5 JOD" },
+      { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Prune Jam",
@@ -57,10 +60,11 @@ const products = [
     image: jamPrune,
     category: "jam",
     sizes: [
-      { label: "S", volume: "120g", price: "5 JOD" },
-      { label: "M", volume: "250g", price: "7 JOD" },
+      { label: "S", volume: "~250g", price: "5 JOD" },
+      { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
+    soldOut: true,
   },
   {
     name: "Kumquat Jam",
@@ -68,10 +72,11 @@ const products = [
     image: jamK,
     category: "jam",
     sizes: [
-      { label: "S", volume: "120g", price: "5 JOD" },
-      { label: "M", volume: "250g", price: "7 JOD" },
+      { label: "S", volume: "~250g", price: "5 JOD" },
+      { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
+    soldOut: false,
   },
   
   {
@@ -80,10 +85,11 @@ const products = [
     image: jamFig,
     category: "jam",
     sizes: [
-      { label: "S", volume: "120g", price: "5 JOD" },
-      { label: "M", volume: "250g", price: "7 JOD" },
+      { label: "S", volume: "~250g", price: "5 JOD" },
+      { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Cherry Jam",
@@ -91,10 +97,11 @@ const products = [
     image: jamCherry,
     category: "jam",
     sizes: [
-      { label: "S", volume: "120g", price: "5 JOD" },
-      { label: "M", volume: "250g", price: "7 JOD" },
+      { label: "S", volume: "~250g", price: "5 JOD" },
+      { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
+    soldOut: false,
   },
   
   {
@@ -109,6 +116,7 @@ const products = [
       { label: "Custom", volume: "Customise your own basket!", price: "From 25 JOD",image: gift },
 
     ],
+    soldOut: false,
   },
   {
     name: "Tasting Set",
@@ -117,8 +125,9 @@ const products = [
     category: "gift",
     occasion: "Year Round",
     sizes: [
-      { label: "One size", volume: "3 jars", price: "5 JOD" },
+      { label: "One size", volume: "3 mini jars", price: "5 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Concentrated Lemon",
@@ -128,6 +137,7 @@ const products = [
     sizes: [
       { label: "750ml", volume: "750ml", price: "6 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Concentrated Khushkhash",
@@ -137,6 +147,7 @@ const products = [
     sizes: [
       { label: "750ml", volume: "750ml", price: "6 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Austrian Pastry",
@@ -146,6 +157,7 @@ const products = [
     sizes: [
       { label: "Whole", volume: "Whole", price: "25 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Jam Biscuits",
@@ -156,6 +168,7 @@ const products = [
       { label: "500g", volume: "0.5kg", price: "15 JOD" },
       { label: "1kg", volume: "1kg", price: "25 JOD" },
     ],
+    soldOut: false,
   },
   {
     name: "Khushkhash Bites",
@@ -166,6 +179,7 @@ const products = [
       { label: "Box", volume: "Box", price: "4 JOD" },
       // { label: "1kg", volume: "1kg", price: "25 JOD" },
     ],
+    soldOut: false,
   },
 ];
 
@@ -190,7 +204,7 @@ const ProductsSection = () => {
           const items = products.filter((p) => p.category === key);
           if (!items.length) return null;
 
-          // Special rendering for gifts — grouped by occasion
+          // Special rendering for gifts grouped by occasion
           if (key === "gift") {
             const byOccasion = items.reduce((acc, product) => {
               const occasion = product.occasion || "Year Round";
@@ -223,7 +237,7 @@ const ProductsSection = () => {
               </div>
             );
           }
-          // Default rendering for all other categories
+          // Default rendering other categories
           return (
             <div key={key} className="mb-16">
               <h3 className="font-display text-2xl text-center text-foreground mb-8">

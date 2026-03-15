@@ -13,9 +13,11 @@ interface ProductCardProps {
   category: string;
   sizes: Size[];
   delay?: number;
+  soldOut?: boolean;
+
 }
 
-const ProductCard = ({ name, description, image, sizes, delay = 0 }: ProductCardProps) => {
+const ProductCard = ({ name, description, image, sizes, delay = 0, soldOut  }: ProductCardProps) => {
   const [selected, setSelected] = useState(0);
   const currentImage = sizes[selected].image || image;
 
@@ -25,15 +27,20 @@ const ProductCard = ({ name, description, image, sizes, delay = 0 }: ProductCard
       className="group opacity-0 animate-fade-up"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="overflow-hidden rounded-sm mb-4 bg-card">
-        <img
+      {soldOut && (
+        <div className="absolute top-3 left-3 z-10 bg-background/90 text-foreground font-body text-xs tracking-widest uppercase px-3 py-1 rounded-full border border-foreground/20">
+        Currently Unavailable
+      </div>
+      )}
+<div className={`overflow-hidden rounded-sm mb-4 bg-card ${soldOut ? "opacity-50 " : ""}`}>
+<img
           src={currentImage}
           alt={name}
           className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
       </div>
-      <div className="text-center">
+      <div className={`text-center ${soldOut ? "opacity-60" : ""}`}>
         <h3 className="font-display text-xl font-semibold text-foreground mb-1">
           {name}
         </h3>
@@ -41,7 +48,6 @@ const ProductCard = ({ name, description, image, sizes, delay = 0 }: ProductCard
           {description}
         </p>
 
-        {/* Size selector — only shows if more than 1 size */}
         {sizes.length > 1 && (
           <div className="flex justify-center gap-2 mb-3">
             {sizes.map((size, i) => (
