@@ -8,16 +8,18 @@ interface Size {
 
 interface ProductCardProps {
   name: string;
+  nameAr: string;
   description: string;
   image?: string;
   category: string;
   sizes: Size[];
   delay?: number;
   soldOut?: boolean;
+  preOrder?: boolean;
 
 }
 
-const ProductCard = ({ name, description, image, sizes, delay = 0, soldOut  }: ProductCardProps) => {
+const ProductCard = ({ name, nameAr, description, image, sizes, delay = 0, soldOut, preOrder  }: ProductCardProps) => {
   const [selected, setSelected] = useState(0);
   const currentImage = sizes[selected].image || image;
 
@@ -32,6 +34,11 @@ const ProductCard = ({ name, description, image, sizes, delay = 0, soldOut  }: P
         Currently Unavailable
       </div>
       )}
+      {preOrder && (
+        <div className="absolute top-3 left-3 z-10 bg-background/90 text-foreground font-body text-xs tracking-widest uppercase px-3 py-1 rounded-full border border-foreground/20 border-yellow-400">
+        Pre-order Required
+      </div>
+      )}
 <div className={`overflow-hidden rounded-sm mb-4 bg-card ${soldOut ? "opacity-50 " : ""}`}>
 <img
           src={currentImage}
@@ -44,7 +51,12 @@ const ProductCard = ({ name, description, image, sizes, delay = 0, soldOut  }: P
         <h3 className="font-display text-xl font-semibold text-foreground mb-1">
           {name}
         </h3>
-        <p className="font-body text-sm text-muted-foreground mb-3">
+        {nameAr && (
+          <p className="font-body text-lg text-muted-foreground/90 mb-1" dir="rtl">
+            {nameAr}
+          </p>
+        )}
+        <p className="font-body text-sm text-muted-foreground/80 mb-3">
           {description}
         </p>
 

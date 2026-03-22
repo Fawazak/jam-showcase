@@ -20,6 +20,7 @@ import largeGift from "@/assets/large-gift.jpg";
 const products = [
   {
     name: "Strawberry Jam",
+    nameAr: "مربى الفراولة",
     description: "Sun-ripened summer strawberries",
     image: jamStrawberry,
     category: "jam",
@@ -32,6 +33,7 @@ const products = [
   },
   {
     name: "Apricot Jam",
+    nameAr: "مربى المشمش",
     description: "Sweet apricot preserves",
     image: jamApricot,
     category: "jam",
@@ -44,6 +46,7 @@ const products = [
   },
   {
     name: "Khushkhash Jam",
+    nameAr: "مربى الخشخاش",
     description: "A Seville orange marmalade",
     image: jamKhush,
     category: "jam",
@@ -56,6 +59,7 @@ const products = [
   },
   {
     name: "Prune Jam",
+    nameAr: "مربى القراصيا",
     description: "Dark velvety prunes",
     image: jamPrune,
     category: "jam",
@@ -68,6 +72,7 @@ const products = [
   },
   {
     name: "Kumquat Jam",
+    nameAr: "مربى الكمقوات",
     description: "Bright tangy kumquats",
     image: jamK,
     category: "jam",
@@ -81,6 +86,7 @@ const products = [
   
   {
     name: "Fig & Walnut Jam",
+    nameAr: "مربى التين والجوز",
     description: "A deeply flavoured preserve of sweet figs and roasted walnuts",
     image: jamFig,
     category: "jam",
@@ -93,6 +99,7 @@ const products = [
   },
   {
     name: "Cherry Jam",
+    nameAr: "مربى الكرز",
     description: "Tart red cherry conserve",
     image: jamCherry,
     category: "jam",
@@ -127,7 +134,7 @@ const products = [
     sizes: [
       { label: "One size", volume: "3 mini jars", price: "5 JOD" },
     ],
-    soldOut: false,
+    soldOut: true,
   },
   {
     name: "Concentrated Lemon",
@@ -158,6 +165,7 @@ const products = [
       { label: "Whole", volume: "Whole", price: "25 JOD" },
     ],
     soldOut: false,
+    preOrder: true
   },
   {
     name: "Jam Biscuits",
@@ -169,6 +177,7 @@ const products = [
       { label: "1kg", volume: "1kg", price: "25 JOD" },
     ],
     soldOut: false,
+    preOrder: true
   },
   {
     name: "Khushkhash Bites",
