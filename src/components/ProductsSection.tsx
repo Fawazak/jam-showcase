@@ -112,14 +112,16 @@ const products = [
   },
   
   {
-    name: "Ramadan Gift Basket",
-    description: "A thoughtful selection to sweeten the holy month",
+    name: "Gift Basket",
+    description: "A thoughtful selection of our finest jams and treats",
     image: gift,
     category: "gift",
-    occasion: "Ramadan 2026",
+    occasion: "Year Round",
     sizes: [
-      { label: "Small", volume: "1 medium jam, 1 small juice, jam biscuits, decorations", price: "25 JOD",image: smallgift2 },
-      { label: "Large", volume: "2 medium + 1 small jam, 1 small juice, jam biscuits, decorations", price: "40 JOD",image: largeGift },
+      //1 medium jam, 1 small juice, jam biscuits, decorations 
+      //2 medium + 1 small jam, 1 small juice, jam biscuits, decorations
+      { label: "Small", volume: "Contact us for details", price: "25 JOD",image: smallgift2 },
+      { label: "Large", volume: "Contact us for details", price: "40 JOD",image: largeGift },
       { label: "Custom", volume: "Customise your own basket!", price: "From 25 JOD",image: gift },
 
     ],
