@@ -42,7 +42,7 @@ const products = [
       { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
-    soldOut: false,
+    soldOut: true,
   },
   {
     name: "Khushkhash Jam",
@@ -95,7 +95,7 @@ const products = [
       { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
-    soldOut: false,
+    soldOut: true,
   },
   {
     name: "Cherry Jam",
