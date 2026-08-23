@@ -42,7 +42,7 @@ const products = [
       { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
-    soldOut: true,
+    soldOut: false,
   },
   {
     name: "Khushkhash Jam",
@@ -68,7 +68,7 @@ const products = [
       { label: "M", volume: "~400g", price: "7 JOD" },
       // { label: "L", volume: "450g", price: "10 JOD" },
     ],
-    soldOut: true,
+    soldOut: false,
   },
   {
     name: "Kumquat Jam",
@@ -190,7 +190,7 @@ const products = [
       { label: "Box", volume: "Box", price: "4 JOD" },
       // { label: "1kg", volume: "1kg", price: "25 JOD" },
     ],
-    soldOut: false,
+    soldOut: true,
   },
 ];
 

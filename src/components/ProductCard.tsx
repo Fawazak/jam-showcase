@@ -31,7 +31,7 @@ const ProductCard = ({ name, nameAr, description, image, sizes, delay = 0, soldO
     >
       {soldOut && (
         <div className="absolute top-3 left-3 z-10 bg-background/90 text-foreground font-body text-xs tracking-widest uppercase px-3 py-1 rounded-full border border-foreground/20">
-        Currently Unavailable
+        Coming Soon
       </div>
       )}
       {preOrder && (

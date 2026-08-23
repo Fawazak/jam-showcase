@@ -53,7 +53,7 @@ const Footer = () => {
               <p className="font-body text-sm text-primary-foreground/70">
                 Amman, Jordan
                 <br />
-                With local fruits
+                
               </p>
             </div>
 

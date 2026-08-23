@@ -32,7 +32,7 @@ const AboutSection = () => {
             </p>
             <p>
               We use only seasonal fruits at their peak ripeness, pure cane sugar, and a touch
-              of lemon. No artificial preservatives, no shortcuts; just honest, beautiful jam
+              of lemon. No artificial preservatives, only beautiful jam
               the way it was meant to be.
             </p>
           </div>
